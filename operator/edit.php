@@ -38,6 +38,7 @@ $list = mysqli_fetch_assoc($result);
         <div class="container" style="background-color: #ffffff;">
 
             <form id="contactForm" style="padding:15px;"  method="POST" action="proses_edit.php">
+            <input type="hidden" name="id" value="<?= $_GET['id'] ?>">  
                 <fieldset>
                     <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Edit Operator</legend>
                 </fieldset>
@@ -54,12 +55,14 @@ $list = mysqli_fetch_assoc($result);
                         <div class="form-group has-feedback"><label for="level">Level</label>
                             <select class="form-control" id="level" name="level">
                                 <optgroup label="Pilih Level User">
-                                    <option value="<?php echo $list['admin'] ?>">admin</option>
-                                    <option value="<?php echo $list['operator'] ?>">operator</option>
+                                    <option value="admin" <?php if($list['level']=="admin") echo 'selected="selected"'; ?>>admin</option>
+                                    <option value="operator" <?php if($list['level']=="operator") echo 'selected="selected"'; ?>>operator</option>
                                 </optgroup>
                             </select>
                         </div>
-                        <div class="form-group"><button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar" value ="Daftar">Ubah Data <i class="fa fa-chevron-circle-right"></i></button><a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;"
+                        
+                        <div class="form-group">
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar" value ="Daftar">Ubah Data <i class="fa fa-chevron-circle-right"></i></button><a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;"
                                 href="../operator.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
                     </div>
                 </div>

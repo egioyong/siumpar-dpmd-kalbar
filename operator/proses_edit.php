@@ -9,6 +9,7 @@ include "../koneksi.php";
         $password = $_POST["password"];
         $bidang = $_POST["bidang"];
         $level = $_POST["level"];
+        //die($_POST["level"]);
       
 
         // buat query update
