@@ -9,7 +9,12 @@ $sql = "DELETE  FROM user WHERE id='$id'";
 $query = mysqli_query($db,$sql);
 
     if($query){
-        header('Location : operator.php');
+        echo"
+        <script>
+            alert ('Data Berhasil Dihapus!');
+            document.location.href = '../operator.php';
+        </script>
+       ";
     }
 
 
