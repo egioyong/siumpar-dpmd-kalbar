@@ -11,11 +11,20 @@ if(isset($_POST["daftar"])){
     $sql = "INSERT INTO user(username, password, bidang, level) VALUE ('$username','$password','$bidang','$level')";
     $query = mysqli_query($db,$sql);
     if($query){
-        // kalau berhasil alihkan ke halaman operator.php dengan status = sukses
-        header("Location: ../operator.php?status=sukses");
+       echo "
+       <script>
+            alert ('Data Berhasil Ditambahkan!');
+            document.location.href = '../operator.php';
+        </script>
+       ";
+       
     } else {
-        // kalau gagal alihkan ke halaman operator.php dengan status = gagal
-        header("Location: ../operator.php?status=gagal");
+        echo 
+        "<script>
+             alert ('Data Gagal Ditambahkan!');
+            document.location.href = '../operator.php';
+         </script>
+        ";
     }
 } else {
     die("Akses dilarang...");

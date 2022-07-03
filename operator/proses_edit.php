@@ -18,10 +18,20 @@ include "../koneksi.php";
 
         // apakah query update berhasil?
         if($query){
-            header("Location: ../operator.php");
+            echo "
+                <script>
+                    alert ('Data Berhasil Diubah!');
+                    document.location.href = '../operator.php';
+                </script>
+                ";
         } else {
             // kalau gagal tampilkan pesan
-            die("Gagal menyimpan perubahan...");
+            echo "
+                <script>
+                    alert ('Data Gagal Dihapus');
+                    document.location.href = '../operator.php';
+                </script>
+                ";
         }
     } else {
         die("Akses dilarang...");

@@ -32,11 +32,20 @@
                 </fieldset>
                 <div class="form-row" style="margin-left:0px;margin-right:0px;padding:10px;">
                     <div class="col-12 col-md-6" id="message" style="padding-right:20px;padding-left:20px;">
-                        <div class="form-group has-feedback"><label for="username">username</label><input class="form-control" type="text" placeholder="Username" name="username"></div>
-                        <div class="form-group has-feedback"><label for="password">Password</label><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                        <div class="form-group has-feedback">
+                            <label for="username">username</label>
+                            <input class="form-control" type="text" placeholder="Username" name="username">
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" name="password" placeholder="Password">
+                        </div>
                     </div>
                     <div class="col-12 col-md-6" id="message-1" style="padding-right:20px;padding-left:20px;">
-                        <div class="form-group has-feedback"><label for="bidang">Bidang</label><input class="form-control" type="text" name="bidang" placeholder="Bidang"></div>
+                        <div class="form-group has-feedback">
+                            <label for="bidang">Bidang</label>
+                            <input class="form-control" type="text" name="bidang" placeholder="Bidang">
+                        </div>
                         <div class="form-group has-feedback"><label for="level">Level</label>
                             <select class="form-control" id="level" name="level">
                                 <optgroup label="Pilih Level User">
@@ -45,8 +54,9 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <div class="form-group"><button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar">Tambah Operator <i class="fa fa-chevron-circle-right"></i></button><a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;"
-                                href="../operator.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
+                        <div class="form-group">
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar">Tambah Operator <i class="fa fa-chevron-circle-right"></i></button>
+                            <a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;" href="../operator.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
                     </div>
                 </div>
             </form>
