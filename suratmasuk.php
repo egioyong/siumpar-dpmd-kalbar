@@ -75,14 +75,18 @@ $result = mysqli_query($db, "SELECT * FROM suratmasuk");
                     <div class="card-header py-3">
                         <p class="text-primary m-0 font-weight-bold">Data Arsip Surat Masuk</p>
                         <div class="col-md-12 search-table-col">
-                            <div><a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="form_suratmasuk.html"><i class="fa fa-plus"></i>Buat Arsip</a><a class="btn btn-primary btn-sm border rounded-0"
-                                    role="button" style="color: rgb(247,247,247);background-color: #1400ff;"><i class="fa fa-print"></i>Print Arsip</a></div>
+                            <div>
+                                <a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="suratmasuk/form_suratmasuk.php"><i class="fa fa-plus"></i>Buat Arsip</a>
+                                <a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(247,247,247);background-color: #FF0000;"><i class="fa fa-print"></i>Print Arsip</a>
+                            </div>
                             <hr>
                             <div style="width: 145px;">
                                 <div class="dropdown"><button class="btn btn-primary btn-sm dropdown-toggle border rounded-0" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: #1400ff;color: rgb(255,255,255);">Cari Berdasarkan</button>
-                                    <div
-                                        class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#" style="width: 145px;">Asal Surat</a><a class="dropdown-item" role="presentation" href="#" style="width: 145px;">Perihal</a><a class="dropdown-item" role="presentation"
-                                            href="#" style="width: 145px;">Tgl Surat</a></div>
+                                    <div class="dropdown-menu" role="menu">
+                                        <a class="dropdown-item" role="presentation" href="#" style="width: 145px;">Asal Surat</a>
+                                        <a class="dropdown-item" role="presentation" href="#" style="width: 145px;">Perihal</a>
+                                        <a class="dropdown-item" role="presentation" href="#" style="width: 145px;">Tgl Surat</a>
+                                    </div>
                             </div>
                             <hr>
                         </div>
@@ -118,10 +122,15 @@ $result = mysqli_query($db, "SELECT * FROM suratmasuk");
                                             <td><?= $list["tgl_naik"]; ?></td>
                                             <td><?= $list["tgl_turun"]; ?></td>
                                             <td><?= $list["bidang"]; ?></td>
-                                            <td><?= $list["file"]; ?></td>
-                                           
-                                            <td><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #ff0000;"><i class="fa fa-download"></i></button><a class="btn btn-primary" role="button"
-                                                    style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0019ff;" href="edit_suratmasuk.html"><i class="fa fa-edit"></i></a><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0c6121;"><i class="fa fa-trash"></i></button></td>
+                                             <td>
+                                                <a  style="font-size:12px" type="button" class="btn btn-primary btn-xs" href="suratmasuk/download.php?id=<?=  $list["file"]; ?>">Download</a>
+                                        </td>                                
+                                            <td>
+                                                <div class="btn-group border rounded-0" role="group">
+                                                    <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="suratmasuk/edit.php?id=<?= $list["id_suratmasuk"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
+                                                    <a class="btn btn-dark btn-sm border rounded-circle" type="button" href="suratmasuk/hapus.php?id=<?= $list["id_suratmasuk"]; ?>"><i class="fa fa-trash" style="font-size: 20px;"></i></a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <?php  endwhile; ?>
                                     </tbody>

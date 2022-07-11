@@ -62,8 +62,8 @@ $list = mysqli_fetch_assoc($result);
                         </div>
                         
                         <div class="form-group">
-                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar" value ="Daftar">Ubah Data <i class="fa fa-chevron-circle-right"></i></button><a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;"
-                                href="../operator.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="daftar" value ="Daftar">Ubah Data <i class="fa fa-chevron-circle-right"></i></button>
+                            <a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;" href="../operator.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
                     </div>
                 </div>
             </form>

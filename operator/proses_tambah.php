@@ -5,10 +5,16 @@ if(isset($_POST["daftar"])){
     // ambil data dari formulir
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $bidang = $_POST["bidang"];
-    $level = $_POST["level"];
+    $bidang   = $_POST["bidang"];
+    $level    = $_POST["level"];
 
-    $sql = "INSERT INTO user(username, password, bidang, level) VALUE ('$username','$password','$bidang','$level')";
+    $sql = "INSERT INTO user(username, password, bidang, level) 
+                    VALUE(
+                        '$username',
+                        '$password',
+                        '$bidang',
+                        '$level'
+                        )";
     $query = mysqli_query($db,$sql);
     if($query){
        echo "

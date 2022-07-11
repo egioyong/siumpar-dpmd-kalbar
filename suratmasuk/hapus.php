@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM suratmasuk WHERE id_suratmasuk = $id";
+$sql   = "DELETE FROM suratmasuk WHERE id_suratmasuk = $id";
 $query = mysqli_query($db,$sql);
 
     if($query){

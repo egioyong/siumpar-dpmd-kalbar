@@ -111,9 +111,12 @@ $result1 = mysqli_query($db, "SELECT * FROM kepaladinas");
                                                 <td><?= $list["level"]; ?></td>
                                                 <td>
                                                     <center>
-                                                    <a class="btn btn-success btn-circle ml-1" type="button" href="operator/edit.php?id=<?= $list["id"]; ?>"><i class="fa fa-edit"></i></a>
-                                                    <a class="btn btn-danger btn-circle ml-1" type="button" href="operator/hapus.php?id=<?= $list["id"]; ?>"><i class="fa fa-trash-o"></i></a>
+                                                        <div class="btn-group border rounded-0" role="group">
+                                                            <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="operator/edit.php?id=<?= $list["id"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
+                                                            <a class="btn btn-dark btn-sm border rounded-circle" type="button" href="operator/hapus.php?id=<?= $list["id"]; ?>"><i class="fa fa-trash" style="font-size: 20px;"></i></a>
+                                                        </div>
                                                     </center>
+                                                   
                                                 </td>
                                             </tr>
             
@@ -142,7 +145,11 @@ $result1 = mysqli_query($db, "SELECT * FROM kepaladinas");
                                                 <td><?= $row["jabatan"]; ?></td>
                                                 <td><?= $row["nip"]; ?></td>
                                                 <td>
-                                                    <a class="btn btn-success btn-circle ml-1" role="button" href="edit_kepaladinas.html"><i class="fa fa-edit"></i></a></td>
+                                                    <center>
+                                                            <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="kadis/edit.php?id=<?= $list["id"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
+                                                        </div>
+                                                    </center>
+                                                </td>
                                             </tr>
                                             <?php endwhile; ?>
                                         </tbody>
