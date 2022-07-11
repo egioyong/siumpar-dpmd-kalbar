@@ -18,8 +18,7 @@ include "../koneksi.php";
         $ukuranFile = $_FILES['file']['size'];
         $error      = $_FILES['file']['error'];
         $tmpName    = $_FILES['file']['tmp_name'];
-       
-    
+        $tmpName    = $_FILES['file']['tmp_name'];
       
 
         // buat query update
