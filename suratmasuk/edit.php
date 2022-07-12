@@ -43,7 +43,7 @@ include "../koneksi.php";
                 <fieldset>
                     <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Edit Surat Masuk</legend>
                 </fieldset>
-                <input type="hidden" name="id_suratmasuk" value="<?= $_GET['id_suratmasuk'] ?>"> 
+                <input type="hidden" name="id_suratmasuk" value="<?= $_GET['id'] ?>"> 
                 <div class="form-row" style="margin-left:0px;margin-right:0px;padding:10px;">
                     <div class="col-12 col-md-6" id="message" style="padding-right:20px;padding-left:20px;">
                         <div class="form-group has-feedback">
@@ -90,7 +90,8 @@ include "../koneksi.php";
                         </div>
                         <div class="form-group">
                             <label for="file">File</label><hr>
-                            <input type="file" name="file" id="file">
+                            <input type="file" name="file" /><?php echo $list['file']?>
+                            <input type="hidden" name="old" value="<?php echo $list['file']?>">
                            
                         </div>
                         <div class="form-group">
