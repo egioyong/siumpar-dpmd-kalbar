@@ -55,8 +55,10 @@ $list = mysqli_fetch_assoc($result);
                         <div class="form-group has-feedback"><label for="level">Level</label>
                             <select class="form-control" id="level" name="level">
                                 <optgroup label="Pilih Level User">
-                                    <option value="admin" <?php if($list['level']=="admin") echo 'selected="selected"'; ?>>admin</option>
-                                    <option value="operator" <?php if($list['level']=="operator") echo 'selected="selected"'; ?>>operator</option>
+                                    <option value="admin" <?php if($list['level']=="admin") echo 'selected="selected"'; ?>>Admin</option>
+                                    <option value="kadis" <?php if($list['level']=="kadis") echo 'selected="selected"'; ?>>Kepala Dinas</option>
+                                    <option value="sekdis" <?php if($list['level']=="sekdis") echo 'selected="selected"'; ?>>Sekretaris</option>
+                                    <option value="kabid" <?php if($list['level']=="kabid") echo 'selected="selected"'; ?>>Kepala Bidang / Sub-bag</option>
                                 </optgroup>
                             </select>
                         </div>

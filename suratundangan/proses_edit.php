@@ -4,7 +4,7 @@ include "../koneksi.php";
     // cek apakah tombol simpan sudah diklik atau belum
     if(isset($_POST["ubah"])){
         // ambil data dari formulir
-        $id             = $_POST['id_suratmasuk'];
+        $id             = $_POST['id_suratundangan'];
         $no_agenda      = $_POST["no_agenda"];
         $asal_surat     = $_POST["asal_surat"];
         $perihal        = $_POST["perihal"];
@@ -24,7 +24,7 @@ include "../koneksi.php";
       
 
         // buat query update
-        $sql = "UPDATE suratmasuk SET 
+        $sql = "UPDATE suratundangan SET 
                        no_agenda    ='$no_agenda', 
                        asal_surat   ='$asal_surat', 
                        perihal      ='$perihal',
@@ -34,7 +34,7 @@ include "../koneksi.php";
                        tgl_turun    ='$tgl_turun',
                        bidang       ='$bidang',
                        file         ='$file' 
-                WHERE id_suratmasuk='$id'";
+                WHERE id_suratundangan='$id'";
         $query = mysqli_query($db, $sql);
 
         // apakah query update berhasil?
@@ -42,7 +42,7 @@ include "../koneksi.php";
             echo "
                 <script>
                     alert ('Data Berhasil Diubah!');
-                    document.location.href = '../suratmasuk.php';
+                    document.location.href = '../suratundangan.php';
                 </script>
                 ";
         } else {
@@ -50,7 +50,7 @@ include "../koneksi.php";
             echo "
                 <script>
                     alert ('Data Gagal Dihapus');
-                    document.location.href = '../suratmasuk.php';
+                    document.location.href = '../suratundangan.php';
                 </script>
                 ";
         }

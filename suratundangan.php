@@ -41,16 +41,16 @@ $result = mysqli_query($db, "SELECT * FROM suratundangan");
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="suratmasuk.html"><i class="fas fa-table"></i><span>Surat Masuk</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="suratundangan.html"><i class="fas fa-table"></i><span>Surat Undangan</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="disposisi.html"><i class="fas fa-book-open"></i><span>Disposisi Surat</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="suratkeluar.html"><i class="fas fa-table"></i><span>Surat Keluar</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="sktim.html"><i class="fas fa-table"></i><span>SK TIM</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="spt.html"><i class="fas fa-table"></i><span>SPT</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="sppd.html"><i class="fas fa-table"></i><span>SPPD</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="operator.html"><i class="fas fa-user-circle"></i><span>Data Operator</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Logout</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="dashboard.php"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="suratmasuk.php"><i class="fas fa-table"></i><span>Surat Masuk</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="suratundangan.php"><i class="fas fa-table"></i><span>Surat Undangan</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="disposisi.php"><i class="fas fa-book-open"></i><span>Disposisi Surat</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="suratkeluar.php"><i class="fas fa-table"></i><span>Surat Keluar</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="sktim.php"><i class="fas fa-table"></i><span>SK TIM</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="spt.php"><i class="fas fa-table"></i><span>SPT</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="sppd.php"><i class="fas fa-table"></i><span>SPPD</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="operator.php"><i class="fas fa-user-circle"></i><span>Data Operator</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.php"><i class="far fa-user-circle"></i><span>Logout</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -76,8 +76,9 @@ $result = mysqli_query($db, "SELECT * FROM suratundangan");
                     <div class="card-header py-3">
                         <p class="text-primary m-0 font-weight-bold">Data Arsip Surat Undangan</p>
                         <div class="col-md-12 search-table-col">
-                            <div><a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="form_suratundangan.html"><i class="fa fa-plus"></i>Buat Arsip</a><a class="btn btn-primary btn-sm border rounded-0"
-                                    role="button" style="color: rgb(255,255,255);background-color: #1400ff;"><i class="fa fa-print"></i>Print Arsip</a></div>
+                            <div>
+                                <a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="suratundangan/form_suratundangan.php"><i class="fa fa-plus"></i>Buat Arsip</a>
+                                <a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #FF0000;"><i class="fa fa-print"></i>Print Arsip</a></div>
                             <hr>
                             <div style="width: 145px;">
                                 <div class="dropdown"><button class="btn btn-primary btn-sm dropdown-toggle border rounded-0" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: #1400ff;color: rgb(255,255,255);">Cari Berdasarkan</button>
@@ -120,9 +121,16 @@ $result = mysqli_query($db, "SELECT * FROM suratundangan");
                                             <td><?= $list["tgl_naik"]; ?></td>
                                             <td><?= $list["tgl_turun"]; ?></td>
                                             <td><?= $list["bidang"]; ?></td>
-                                            <td><?= $list["file"]; ?></td>
-                                            <td><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #ff0000;"><i class="fa fa-download"></i></button><a class="btn btn-primary" role="button"
-                                                    style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0019ff;" href="edit_suratundangan.html"><i class="fa fa-edit"></i></a><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0c6121;"><i class="fa fa-trash"></i></button></td>
+                                            <td>
+                                            <a  style="font-size:12px" type="button" class="btn btn-primary btn-xs" href="suratundangan/download.php?id=<?=  $list["id_suratundangan"]; ?>">Download</a>
+                                            </td>
+                                            <td>
+                                            <div class="btn-group border rounded-0" role="group">
+                                                    <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="suratundangan/edit.php?id=<?= $list["id_suratundangan"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
+                                                    <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="suratundangan/disposisi.php?id=<?= $list["id_suratundangan"]; ?>"><i class="fas fa-server" style="font-size: 20px;"></i></a>
+                                                    <a class="btn btn-dark btn-sm border rounded-circle" type="button" href="suratundangan/hapus.php?id=<?= $list["id_suratundangan"]; ?>"><i class="fa fa-trash" style="font-size: 20px;"></i></a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <?php endwhile; ?>
                                     </tbody>

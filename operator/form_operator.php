@@ -49,8 +49,10 @@
                         <div class="form-group has-feedback"><label for="level">Level</label>
                             <select class="form-control" id="level" name="level">
                                 <optgroup label="Pilih Level User">
-                                    <option value="admin">admin</option>
-                                    <option value="operator">operator</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="kadis">Kepala Dinas</option>
+                                    <option value="sekdis">Sekretaris Dinas</option>
+                                    <option value="kabid">Kepala Bidang / Sub-bag</option>
                                 </optgroup>
                             </select>
                         </div>

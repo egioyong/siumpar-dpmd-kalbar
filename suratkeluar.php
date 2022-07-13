@@ -116,7 +116,8 @@ $result = mysqli_query($db, "SELECT * FROM suratkeluar");
                                             <td><?= $list["perihal"]; ?></td>
                                             <td><?= $list["tujuan"]; ?></td>
                                             <td><?= $list["file"]; ?></td>
-                                            <td><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #ff0000;"><i class="fa fa-download"></i></button><a class="btn btn-primary" role="button"
+                                            <td>
+                                                <button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #ff0000;"><i class="fa fa-download"></i></button><a class="btn btn-primary" role="button"
                                                     style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0019ff;" href="edit_suratkeluar.html"><i class="fa fa-edit"></i></a><button class="btn btn-primary" type="button" style="width: 54px;height: 44px;color: rgb(255,255,255);background-color: #0c6121;"><i class="fa fa-trash"></i></button>
                                             </td>
                                         </tr>

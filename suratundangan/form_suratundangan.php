@@ -1,20 +1,10 @@
-<?php
-include "../koneksi.php";
-    $id = $_GET['id'];
-    $query = "SELECT * FROM suratmasuk WHERE id_suratmasuk = '$id'";
-
-    $result =mysqli_query($db,$query);
-    $list = mysqli_fetch_assoc($result);
-
-
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Edit Surat Masuk</title>
+    <title>Tambah Surat Undangan</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One">
@@ -39,28 +29,27 @@ include "../koneksi.php";
 <body style="background-image: url(&quot;../assets/img/IMG_0247.JPG&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;">
     <section id="contact" style="padding:40px;padding-right:5px;padding-left:4px;">
         <div class="container" style="background-color: #ffffff;">
-            <form id="contactForm" style="padding:15px;" action="proses_edit.php" method="POST" enctype="multipart/form-data">
+            <form id="contactForm" style="padding:15px;" action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                 <fieldset>
-                    <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Edit Surat Masuk</legend>
+                    <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Form Surat Masuk</legend>
                 </fieldset>
-                <input type="hidden" name="id_suratmasuk" value="<?= $_GET['id'] ?>"> 
                 <div class="form-row" style="margin-left:0px;margin-right:0px;padding:10px;">
                     <div class="col-12 col-md-6" id="message" style="padding-right:20px;padding-left:20px;">
                         <div class="form-group has-feedback">
                             <label for="no_agenda">Nomor Agenda</label>
-                            <input class="form-control" type="text" id="no_agenda"  name="no_agenda" placeholder="Nomor Agenda" value="<?php echo $list['no_agenda'] ?>">
+                            <input class="form-control" type="text" id="no_agenda"  name="no_agenda" placeholder="Nomor Agenda">
                         </div>
                         <div class="form-group has-feedback">
                             <label for="asal_surat">Asal Surat</label>
-                            <input class="form-control" type="text" id="asal_surat"  name="asal_surat" placeholder="Asal Surat" value="<?php echo $list['asal_surat'] ?>">
+                            <input class="form-control" type="text" id="asal_surat"  name="asal_surat" placeholder="Asal Surat">
                         </div>
                         <div class="form-group has-feedback">
                             <label for="perihal">Perihal</label>
-                            <textarea class="form-control" placeholder="Perihal" name="perihal"><?php echo $list['perihal'] ?></textarea>
+                            <textarea class="form-control" placeholder="Perihal" name="perihal"></textarea>
                         </div>
                         <div class="form-group has-feedback">
                             <label for="no_tgl_surat">Nomor dan Tgl Surat</label>
-                            <textarea class="form-control" placeholder="Nomor dan Tgl Surat" name="no_tgl_surat"><?php echo $list['no_tgl_surat'] ?></textarea>
+                            <textarea class="form-control" placeholder="Nomor dan Tgl Surat" name="no_tgl_surat"></textarea>
                         </div>
                     </div>
                     <div class="col-12 col-md-6" id="message-1" style="padding-right:20px;padding-left:20px;">
@@ -68,34 +57,32 @@ include "../koneksi.php";
                             <div class="col-sm-6">
                                 <div class="form-group has-feedback">
                                     <label for="tgl_terima">Tgl.Terima Surat</label>
-                                    <input class="form-control" type="date" name="tgl_terima" value="<?php echo $list['tgl_terima'] ?>">
+                                    <input class="form-control" type="date" name="tgl_terima">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="tgl_naik">Tgl.Naik Surat</label>
-                                    <input class="form-control" type="date" name="tgl_naik" value="<?php echo $list['tgl_naik'] ?>">
+                                    <label for="tgl_naik">Tgl.Naik Surat</label
+                                    ><input class="form-control" type="date" name="tgl_naik">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="tgl_turun">Tgl.Turun Surat</label>
-                                    <input class="form-control" type="date" name="tgl_turun" value="<?php echo $list['tgl_turun'] ?>">
+                                    <input class="form-control" type="date" name="tgl_turun">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group has-feedback">
                             <label for="bidang">Turun Ke Bidang</label>
-                            <input class="form-control" type="text" id="bidang"  name="bidang"  placeholder="Turun Ke Bidang" value="<?php echo $list['bidang'] ?>">
+                            <input class="form-control" type="text" id="bidang"  name="bidang"  placeholder="Turun Ke Bidang">
                         </div>
                         <div class="form-group">
                             <label for="file">File</label><hr>
-                            <input type="file" name="file" /><?php echo $list['file']?>
-                            <input type="hidden" name="old" value="<?php echo $list['file']?>">
-                           
+                            <input type="file" name="file">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="ubah">Send <i class="fa fa-chevron-circle-right"></i></button>
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="tambah">Send <i class="fa fa-chevron-circle-right"></i></button>
                             <a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;" href="../suratmasuk.php">Kembali<i class="fa fa-chevron-circle-left"></i></a>
                         </div>
                     </div>
