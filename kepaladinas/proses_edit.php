@@ -2,21 +2,17 @@
 include "../koneksi.php";
 
     // cek apakah tombol simpan sudah diklik atau belum
-    if(isset($_POST["daftar"])){
+    if(isset($_POST["ubah"])){
         // ambil data dari formulir
-        $id       = $_POST["id"];
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        $bidang   = $_POST["bidang"];
-        $level    = $_POST["level"];   
+        $id       = $_POST["id_kepaladinas"];
+        $nama     = $_POST["nama"];
+        $jabatan  = $_POST["jabatan"];
+        $nip      = $_POST["nip"];
+    // var_dump($id);die();
+
 
         // buat query update
-        $sql = "UPDATE user SET 
-                    username = '$username', 
-                    password = '$password', 
-                    bidang   = '$bidang',
-                    level    = '$level'  
-                WHERE id='$id'";
+        $sql = "UPDATE kepaladinas SET nama='$nama', jabatan='$jabatan', nip='$nip' WHERE id_kepaladinas='$id'";
                 
         $query = mysqli_query($db, $sql);
 

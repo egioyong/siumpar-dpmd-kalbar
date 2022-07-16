@@ -152,7 +152,9 @@ $result = mysqli_query($db, "SELECT * FROM suratkeluar");
                                                     <td><?= $list["tgl_surat"]; ?></td>
                                                     <td><?= $list["perihal"]; ?></td>
                                                     <td><?= $list["tujuan"]; ?></td>
-                                                    <td><?= $list["file"]; ?></td>
+                                                    <td>
+                                                        <a  style="font-size:12px" type="button" class="btn btn-primary btn-xs" href="suratkeluar/download.php?id=<?=  $list["id_suratkeluar"]; ?>">Download</a>
+                                                    </td>
                                                     <td>
                                                     <div class="btn-group border rounded-0" role="group">
                                                         <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="suratkeluar/edit.php?id=<?= $list["id_suratkeluar"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>

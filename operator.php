@@ -116,7 +116,6 @@ $result1 = mysqli_query($db, "SELECT * FROM kepaladinas");
                                                             <a class="btn btn-dark btn-sm border rounded-circle" type="button" href="operator/hapus.php?id=<?= $list["id"]; ?>"><i class="fa fa-trash" style="font-size: 20px;"></i></a>
                                                         </div>
                                                     </center>
-                                                   
                                                 </td>
                                             </tr>
             
@@ -146,7 +145,7 @@ $result1 = mysqli_query($db, "SELECT * FROM kepaladinas");
                                                 <td><?= $row["nip"]; ?></td>
                                                 <td>
                                                     <center>
-                                                            <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="kadis/edit.php?id=<?= $list["id"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
+                                                            <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="kepaladinas/edit_kepaladinas.php?id=<?= $row["id_kepaladinas"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
                                                         </div>
                                                     </center>
                                                 </td>
