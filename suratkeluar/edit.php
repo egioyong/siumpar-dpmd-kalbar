@@ -74,7 +74,7 @@ include "../koneksi.php";
                             <input type="hidden" name="old" value="<?php echo $list['file']?>">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="ubah">Ubah <i class="fa fa-chevron-circle-right"></i></button>
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="ubah">Ubah Data <i class="fa fa-chevron-circle-right"></i></button>
                             <a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;" href="../suratkeluar.php">Kembali<i class="fa fa-chevron-circle-left"></i></a></div>
                     </div>
                 </div>

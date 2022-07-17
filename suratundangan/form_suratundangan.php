@@ -31,7 +31,7 @@
         <div class="container" style="background-color: #ffffff;">
             <form id="contactForm" style="padding:15px;" action="proses_tambah.php" method="POST" enctype="multipart/form-data">
                 <fieldset>
-                    <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Form Surat Masuk</legend>
+                    <legend class="text-center"><i class="fa fa-envelope"></i>&nbsp; Form Surat Undangan</legend>
                 </fieldset>
                 <div class="form-row" style="margin-left:0px;margin-right:0px;padding:10px;">
                     <div class="col-12 col-md-6" id="message" style="padding-right:20px;padding-left:20px;">
@@ -82,7 +82,7 @@
                             <input type="file" name="file">
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="tambah">Send <i class="fa fa-chevron-circle-right"></i></button>
+                            <button class="btn btn-primary active btn-block" style="background-color: rgb(0,90,255);" type="submit" name="tambah">Tambah Data <i class="fa fa-chevron-circle-right"></i></button>
                             <a class="btn btn-primary active btn-block" role="button" style="background-color:#303641;" href="../suratmasuk.php">Kembali<i class="fa fa-chevron-circle-left"></i></a>
                         </div>
                     </div>

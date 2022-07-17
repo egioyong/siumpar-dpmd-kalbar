@@ -35,7 +35,7 @@ $result = mysqli_query($db, "SELECT * FROM suratmasuk");
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="dashboard.html">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="dashboard.php">
                     <div class="sidebar-brand-icon rotate-n-15"><img style="width: 32px;height: 32px;" src="assets/img/file_archive_folders_icon_193943.png"></div>
                     <div class="sidebar-brand-text mx-3"><span>Siumpar</span></div>
                 </a>
@@ -110,7 +110,7 @@ $result = mysqli_query($db, "SELECT * FROM suratmasuk");
                                     </thead>
                                     <tbody>
                                         <tr class="warning no-result">
-                                            <td colspan="12"><i class="fa fa-warning"></i>&nbsp; No Result !!!</td>
+                                            <td colspan="12"><i class="fa fa-warning"></i>&nbsp; Data Tidak Ditemukan !!!</td>
                                         </tr>
                                         <?php while($list = mysqli_fetch_assoc($result)) : ?>
                                         <tr>

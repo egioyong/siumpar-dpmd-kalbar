@@ -33,7 +33,7 @@ $list = mysqli_fetch_assoc($result);
     <link rel="stylesheet" href="../assets/css/Table-With-Search.css">
 </head>
 
-<body style="background-image: url(&quot;assets/img/IMG_0247.JPG&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;">
+<body style="background-image: url(&quot;../assets/img/IMG_0247.JPG&quot;);background-position: center;background-size: cover;background-repeat: no-repeat;">
     <section id="contact" style="padding:40px;padding-right:5px;padding-left:4px;">
         <div class="container" style="background-color: #ffffff;">
 

@@ -36,9 +36,10 @@
                     Marketing, Progressive Web Applications, Web Performance &amp; Analytics.</p><a class="btn" href="login.php">buat SURAT MASUK</a>
                 <hr><a class="btn" href="login.php">buat SURAT KELUAR</a></div>
             <div class="d-flex justify-content-between landing-cta-group">
-                <div class="btn-group-vertical align-self-center" role="group"><a class="btn btn-success btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/hubungi-kami-before-import/"><i class="material-icons">phone</i></a><a class="btn btn-primary btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/"><i class="fab fa-wordpress" style="font-size: 24px;"></i></a>
-                    <a
-                        class="btn btn-danger btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/hubungi-kami-before-import/"><i class="material-icons">email</i></a>
+                <div class="btn-group-vertical align-self-center" role="group">
+                    <a class="btn btn-success btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/hubungi-kami-before-import/"><i class="material-icons">phone</i></a>
+                    <a class="btn btn-primary btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/"><i class="fab fa-wordpress" style="font-size: 24px;"></i></a>
+                    <a class="btn btn-danger btn-sm" role="button" href="http://dpmd.kalbarprov.go.id/hubungi-kami-before-import/"><i class="material-icons">email</i></a>
                 </div>
             </div>
         </div>
