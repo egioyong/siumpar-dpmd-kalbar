@@ -119,12 +119,12 @@
                                             <td>
                                             <a  style="font-size:12px" type="button" class="btn btn-primary btn-xs" href="spt/download.php?id=<?=  $list["id_spt"]; ?>">Download</a>
                                             </td>
-                                             <td>
-                                             <div class="btn-group border rounded-0" role="group">
+                                            <td>
+                                            <div class="btn-group border rounded-0" role="group">
                                                         <a class="btn btn-danger btn-sm border rounded-circle" type="button" href="spt/edit.php?id=<?= $list["id_spt"]; ?>"><i class="fa fa-edit" style="font-size: 20px;"></i></a>
                                                         <a class="btn btn-dark btn-sm border rounded-circle" type="button" href="spt/hapus.php?id=<?= $list["id_spt"]; ?>"><i class="fa fa-trash" style="font-size: 20px;"></i></a>
                                                     </div>
-                                             </td>
+                                            </td>
                                         </tr>
                                         <?php endwhile; ?>
                                     </tbody>

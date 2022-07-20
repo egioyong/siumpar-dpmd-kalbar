@@ -34,7 +34,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0">
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="dashboard.html">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="dashboard.php">
                     <div class="sidebar-brand-icon rotate-n-15"><img style="width: 32px;height: 32px;" src="assets/img/file_archive_folders_icon_193943.png"></div>
                     <div class="sidebar-brand-text mx-3"><span>Siumpar</span></div>
                 </a>
@@ -74,8 +74,8 @@
                     <div class="card-header py-3">
                         <p class="text-primary m-0 font-weight-bold">Data Disposisi Surat</p>
                         <div class="col-md-12 search-table-col">
-                            <div><a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="form_disposisi.html"><i class="fa fa-plus"></i>&nbsp;Disposisi</a><a class="btn btn-primary btn-sm border rounded-0"
-                                    role="button" style="color: rgb(255,255,255);width: 91.35px;background-color: #1400ff;"><i class="fa fa-print"></i>Print</a></div>
+                            <div><a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;" href="disposisi/form_disposisi.php"><i class="fa fa-plus"></i>&nbsp;Disposisi</a><a class="btn btn-primary btn-sm border rounded-0"
+                                    role="button" style="color: rgb(255,255,255);width: 91.35px;background-color: #FF0000;"><i class="fa fa-print"></i>Print</a></div>
                             <hr>
                             <div style="width: 145px;">
                                 <div class="dropdown"><button class="btn btn-primary btn-sm dropdown-toggle border rounded-0" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: #1400ff;color: rgb(255,255,255);">Cari Berdasarkan</button>

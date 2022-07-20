@@ -77,7 +77,7 @@ $result1 = mysqli_query($db, "SELECT * FROM kepaladinas");
                         <p class="text-primary m-0 font-weight-bold">Data Operator & Kepala Dinas&nbsp;</p>
                         <div class="col-md-12 search-table-col">
                             <div><a class="btn btn-primary btn-sm border rounded-0" role="button" style="color: rgb(255,255,255);background-color: #1400ff;width: 108.425px;" href="operator/form_operator.php"><i class="far fa-user-circle"></i>Tambah</a><a class="btn btn-primary btn-sm text-center border rounded-0"
-                                    role="button" style="color: rgb(255,255,255);width: 108.425px;background-color: #FF0000;"  href="operator/proses_cetak.php" target="_blank">
+                                    role="button" style="color: rgb(255,255,255);width: 108.425px;background-color: #FF0000;"  href="cetak_operator.php" target="_blank">
                                 <i class="fa fa-print"></i>PDF</a></div>
                             <hr>
                             <div class="form-group pull-right col-lg-4"><input type="text" class="search form-control" placeholder="Cari Arsip"></div>
